@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Tetris" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Tetris" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Tetris" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="E:/mingw_lib/include/SDL2" />
+			<Add directory="E:/mingw_lib/i686-w64-mingw32/include/SDL2" />
+			<Add directory="E:/mingw_lib/SDL_ttf/i686-w64-mingw32/include/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf" />
+			<Add directory="E:/mingw_lib/lib" />
+			<Add directory="E:/mingw_lib/i686-w64-mingw32/lib" />
+			<Add directory="E:/mingw_lib/SDL_ttf/i686-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="board.cpp" />
+		<Unit filename="board.h" />
+		<Unit filename="button.cpp" />
+		<Unit filename="button.h" />
+		<Unit filename="effect.cpp" />
+		<Unit filename="effect.h" />
+		<Unit filename="font/advanced_pixel_lcd-7.ttf" />
+		<Unit filename="game.cpp" />
+		<Unit filename="game.h" />
+		<Unit filename="header.h" />
+		<Unit filename="image/1.png" />
+		<Unit filename="image/2.png" />
+		<Unit filename="image/3.png" />
+		<Unit filename="image/backbutton.png" />
+		<Unit filename="image/background.png" />
+		<Unit filename="image/background3.png" />
+		<Unit filename="image/black_texture.png" />
+		<Unit filename="image/blackbrick.png" />
+		<Unit filename="image/bluebrick.png" />
+		<Unit filename="image/continue.png" />
+		<Unit filename="image/coralbrick.png" />
+		<Unit filename="image/darkbrick.png" />
+		<Unit filename="image/exit.png" />
+		<Unit filename="image/full-background.png" />
+		<Unit filename="image/full-menu.png" />
+		<Unit filename="image/gameover.png" />
+		<Unit filename="image/greenbrick.png" />
+		<Unit filename="image/levelboard.png" />
+		<Unit filename="image/lightbluebrick.png" />
+		<Unit filename="image/mainmenu.png" />
+		<Unit filename="image/menu.png" />
+		<Unit filename="image/orangebrick.png" />
+		<Unit filename="image/pausebutton.png" />
+		<Unit filename="image/paused.png" />
+		<Unit filename="image/pinkbrick.png" />
+		<Unit filename="image/play.png" />
+		<Unit filename="image/playagain.png" />
+		<Unit filename="image/playbutton.png" />
+		<Unit filename="image/pressedbackbutton.png" />
+		<Unit filename="image/pressedcontinue.png" />
+		<Unit filename="image/pressedexit.png" />
+		<Unit filename="image/pressedmainmenu.png" />
+		<Unit filename="image/pressedplay.png" />
+		<Unit filename="image/pressedplayagain.png" />
+		<Unit filename="image/pressedstart.png" />
+		<Unit filename="image/pressedtutorial.png" />
+		<Unit filename="image/scoreboard.png" />
+		<Unit filename="image/start.png" />
+		<Unit filename="image/tutorial.png" />
+		<Unit filename="image/tutorialpage.png" />
+		<Unit filename="image/yellowbrick.png" />
+		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="number.cpp" />
+		<Unit filename="number.h" />
+		<Unit filename="tetromino.cpp" />
+		<Unit filename="tetromino.h" />
+		<Unit filename="window.cpp" />
+		<Unit filename="window.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

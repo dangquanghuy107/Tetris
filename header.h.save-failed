@@ -1,0 +1,3 @@
+
+
+Window window("Tetris", 800, 600);

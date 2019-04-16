@@ -1,0 +1,441 @@
+# depslib dependency file v1.0
+1555383788 source:c:\users\admin\desktop\tetris\main.cpp
+	<bits/stdc++.h>
+	"header.h"
+
+1555252729 c:\users\admin\desktop\tetris\window.h
+	<string>
+	<SDL.h>
+
+1540998544 e:\mingw_lib\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\begin_code.h
+
+1540998544 e:\mingw_lib\include\sdl2\close_code.h
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<mbarrier.h>
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<arm_neon.h>
+	<mm3dnow.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1540998544 e:\mingw_lib\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1555165642 source:c:\users\admin\desktop\tetris\window.cpp
+	<iostream>
+	<string>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	"header.h"
+
+1555343832 c:\users\admin\desktop\tetris\header.h
+	"window.h"
+	"board.h"
+	"tetromino.h"
+	"game.h"
+	"number.h"
+	"menu.h"
+	"button.h"
+	"effect.h"
+
+1555382989 c:\users\admin\desktop\tetris\board.h
+	<SDL.h>
+	"tetromino.h"
+
+1555382405 source:c:\users\admin\desktop\tetris\board.cpp
+	<SDL.h>
+	<iostream>
+	"header.h"
+
+1555252404 c:\users\admin\desktop\tetris\tetromino.h
+	<bits/stdc++.h>
+	<SDL.h>
+
+1555252431 source:c:\users\admin\desktop\tetris\tetromino.cpp
+	<SDL.h>
+	"header.h"
+
+1555383749 source:c:\users\admin\desktop\tetris\game.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	"header.h"
+
+1555383639 c:\users\admin\desktop\tetris\game.h
+	"number.h"
+
+1540997982 e:\mingw_lib\i686-w64-mingw32\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1547322281 e:\mingw_lib\i686-w64-mingw32\include\sdl2\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1555384200 c:\users\admin\desktop\tetris\number.h
+	<SDL.h>
+	<SDL_ttf.h>
+
+1555252858 source:c:\users\admin\desktop\tetris\number.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	"header.h"
+
+1555383890 c:\users\admin\desktop\tetris\menu.h
+	<SDL.h>
+	"button.h"
+
+1555383922 c:\users\admin\desktop\tetris\button.h
+	<SDL.h>
+
+1555345780 source:c:\users\admin\desktop\tetris\button.cpp
+	<SDL.h>
+	"header.h"
+
+1555383957 source:c:\users\admin\desktop\tetris\menu.cpp
+	<SDL.h>
+	"header.h"
+
+1554994609 c:\users\admin\desktop\tetris\transition.h
+
+1554996768 source:c:\users\admin\desktop\tetris\transition.cpp
+	<SDL.h>
+	"header.h"
+
+1555383232 c:\users\admin\desktop\tetris\effect.h
+
+1555383359 source:c:\users\admin\desktop\tetris\effect.cpp
+	<SDL.h>
+	"header.h"
+
