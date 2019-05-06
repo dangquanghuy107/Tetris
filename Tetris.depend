@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1555383788 source:c:\users\admin\desktop\tetris\main.cpp
+1557162678 source:c:\users\admin\desktop\tetris\main.cpp
 	<bits/stdc++.h>
 	"header.h"
 
@@ -349,15 +349,16 @@
 	"begin_code.h"
 	"close_code.h"
 
-1555165642 source:c:\users\admin\desktop\tetris\window.cpp
+1557158757 source:c:\users\admin\desktop\tetris\window.cpp
 	<iostream>
 	<string>
 	<SDL.h>
 	<SDL_ttf.h>
 	<SDL_image.h>
+	<SDL_mixer.h>
 	"header.h"
 
-1555343832 c:\users\admin\desktop\tetris\header.h
+1557162617 c:\users\admin\desktop\tetris\header.h
 	"window.h"
 	"board.h"
 	"tetromino.h"
@@ -366,12 +367,13 @@
 	"menu.h"
 	"button.h"
 	"effect.h"
+	"sound.h"
 
 1555382989 c:\users\admin\desktop\tetris\board.h
 	<SDL.h>
 	"tetromino.h"
 
-1555382405 source:c:\users\admin\desktop\tetris\board.cpp
+1557163806 source:c:\users\admin\desktop\tetris\board.cpp
 	<SDL.h>
 	<iostream>
 	"header.h"
@@ -384,7 +386,7 @@
 	<SDL.h>
 	"header.h"
 
-1557072048 source:c:\users\admin\desktop\tetris\game.cpp
+1557163953 source:c:\users\admin\desktop\tetris\game.cpp
 	<SDL.h>
 	<SDL_ttf.h>
 	"header.h"
@@ -437,5 +439,21 @@
 
 1557064219 source:c:\users\admin\desktop\tetris\effect.cpp
 	<SDL.h>
+	"header.h"
+
+1540997992 e:\mingw_lib\sdl_mixer\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1557163658 c:\users\admin\desktop\tetris\sound.h
+	<SDL_mixer.h>
+
+1557163708 source:c:\users\admin\desktop\tetris\sound.cpp
+	<SDL_mixer.h>
 	"header.h"
 

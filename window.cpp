@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include <SDL_image.h>
+#include <SDL_mixer.h>
 #include "header.h"
 
 Window::Window(const std::string &title, int width, int height): _title(title), _width(width), _height(height){
@@ -16,6 +17,7 @@ Window::~Window(){
     _renderer = nullptr;
     _window = nullptr;
 
+    Mix_Quit();
     SDL_Quit();
     TTF_Quit();
     IMG_Quit();
@@ -24,6 +26,11 @@ Window::~Window(){
 bool Window::init(){
     if (SDL_Init(SDL_INIT_VIDEO) != 0){
         std::cerr << "Failed to initialize SDL.\n";
+        return false;
+    }
+
+    if (SDL_Init( SDL_INIT_VIDEO | SDL_INIT_AUDIO ) == -1){
+        std::cerr << "Failed to initialize Media.\n";
         return false;
     }
 
@@ -55,6 +62,10 @@ bool Window::init(){
         return false;
     }
 
+    if( Mix_OpenAudio( 44100, MIX_DEFAULT_FORMAT, 2, 2048 ) == -1 ){
+        std::cerr << "Failed to initialize SDL_Mixer.\n";
+        return false;
+    }
     return true;
 }
 

@@ -55,15 +55,19 @@ void Game::removeLines(){
 
         switch (board.getDeleteRowCount()){
             case 1:
+                sound.playSound(CLEAR_SOUND);
                 _score += 40 * _level;
                 break;
             case 2:
+                sound.playSound(CLEAR_SOUND);
                 _score += 100 * _level;
                 break;
             case 3:
+                sound.playSound(CLEAR_SOUND);
                 _score += 300 * _level;
                 break;
             case 4:
+                sound.playSound(CLEAR_FOUR_SOUND);
                 _score += 1200 * _level;
                 break;
             default:
@@ -155,6 +159,7 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
 
                 switch (curEvent.key.keysym.sym){
                     case SDLK_UP:
+
                         if (!upPressed) newPiece.rotateRight();
                         upPressed = true;
                         break;
@@ -178,11 +183,12 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
 
                         SDL_RenderPresent(_renderer);
 
-                        if (elapsedTime > 250){
+                        if (elapsedTime > 220){
                             newPiece.moveRight();
                             SDL_Delay(75);
                         }
                         break;
+
                     case SDLK_LEFT:
                         if (firstMove)
                             newPiece.moveLeft();
@@ -195,11 +201,12 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
 
                         SDL_RenderPresent(_renderer);
 
-                        if (elapsedTime > 250){
+                        if (elapsedTime > 220){
                             newPiece.moveLeft();
                             SDL_Delay(75);
                         }
                         break;
+
                     case SDLK_SPACE:
                         if (board.canMoveDown(newPiece)){
                             board.hardDrop(newPiece);
@@ -209,6 +216,7 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
                             hardDrop = true;
                         }
                         break;
+
                     case SDLK_c:
                         if (!holdUsed){
                             if (_holdPiece == -1){
@@ -269,6 +277,11 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
 }
 
 void Game::gameOver(){
+    /// Stop theme music
+    /// Play game over music
+    sound.stopMusic();
+    sound.playMusic(GAME_OVER_SONG);
+
     reset();
 
     SDL_RenderCopy(_renderer, gameOverTexture, NULL, NULL);
@@ -293,6 +306,10 @@ void Game::gameOver(){
                 int mouseState = gameOverButton[i].handleEvent(&event);
 
                 if (mouseState == PRESSED){
+                    /// stop game over Song
+                    sound.stopMusic();
+                    sound.playMusic(THEME_SONG);
+
                     hover = false;
                     SDL_SetCursor( arrowCursor );
 

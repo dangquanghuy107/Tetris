@@ -9,6 +9,7 @@
 #include "menu.h"
 #include "button.h"
 #include "effect.h"
+#include "sound.h"
 
 using namespace std;
 
@@ -36,5 +37,6 @@ extern Effect effect;
 extern Board board;
 extern Game game;
 extern Menu mainMenu;
+extern Sound sound;
 
 #endif // HEADER_H

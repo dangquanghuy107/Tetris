@@ -9,11 +9,13 @@ SDL_Renderer* _renderer = nullptr;
 Board board;
 Game game;
 Menu mainMenu;
+Sound sound;
 
 int main(int argc, char *argv[]){
     game.init();
     effect.fadeIn(menuTexture);
     mainMenu.renderMenu();
+    sound.playMusic(THEME_SONG);
 
     while (!window.isClosed()){
         mainMenu.getEvent();
