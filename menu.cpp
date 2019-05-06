@@ -9,7 +9,7 @@ SDL_Texture* countDown[4];
 SDL_Cursor* handCursor;
 SDL_Cursor* arrowCursor;
 SDL_Event event;
-
+//
 Menu::Menu(){
     effect.init();
     _ingameTexture = window.loadTexture("image/background.png");

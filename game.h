@@ -19,6 +19,7 @@ public:
 
     /// Render the next panel
     void updateNextField();
+    void renderHoldPiece();
 
     /// Remove full lines + update score & level
     void removeLines();

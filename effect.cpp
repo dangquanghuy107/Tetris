@@ -68,7 +68,7 @@ bool Effect::pause(){
     while (1){
         bool pollSuccess = SDL_PollEvent(&event);
         if (pollSuccess){
-            bool hover = true;
+            bool hover = false;
             if (event.type == SDL_QUIT){
                 window.close();
                 exit(0);
@@ -86,7 +86,6 @@ bool Effect::pause(){
                     }
                     else{
                         effect.fadeIn(menuTexture);
-                        game.reset();
                         mainMenu.setCurrentWindow(MENU);
                         mainMenu.renderMenu();
                         return true;
@@ -125,6 +124,7 @@ void Effect::resume(){
     }
 
     drawBoard();
+    game.renderHoldPiece();
     game.updateNextField();
     SDL_RenderPresent(_renderer);
 }

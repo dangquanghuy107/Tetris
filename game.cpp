@@ -103,6 +103,10 @@ void Game::updateScore(){
     score.printValue(_score, x + 4, y + 4, w - 2, h - 2);
 }
 
+void Game::renderHoldPiece(){
+    board.renderPiece(_holdPiece, 4 * CELL_SIZE, 5 * CELL_SIZE);
+}
+
 bool Game::tick(Tetromino curPiece, bool holdUsed){
     while (curPiece.getCurrentPosition().second >= 0 && !board.isValidPosition(curPiece))
         curPiece.moveUp();
@@ -116,6 +120,8 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
     bool hardDrop = false;
     Tetromino newPiece;
     SDL_Event curEvent;
+
+    int startPress = -1;
 
     while (1){
         int frameStartTime = SDL_GetTicks();
@@ -138,8 +144,15 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
         const Uint8 *keyState = SDL_GetKeyboardState(NULL);
         if (!keyState[SDL_SCANCODE_UP]) upPressed = false;
 
-
         if (!hardDrop && curEvent.type == SDL_KEYDOWN){
+                bool firstMove;
+                if (startPress == -1) {
+                    startPress = SDL_GetTicks();
+                    firstMove = true;
+                }
+                int endPress = SDL_GetTicks();
+                int elapsedTime = endPress - startPress;
+
                 switch (curEvent.key.keysym.sym){
                     case SDLK_UP:
                         if (!upPressed) newPiece.rotateRight();
@@ -154,12 +167,38 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
                         SDL_Delay(75);
                         break;
                     case SDLK_RIGHT:
-                        newPiece.moveRight();
-                        SDL_Delay(75);
+                        if (firstMove)
+                            newPiece.moveRight();
+                        firstMove = false;
+
+                        if (!board.isValidPosition(newPiece)) newPiece = curPiece;
+
+                        board.deletePiece(curPiece);
+                        board.renderPiece(newPiece);
+
+                        SDL_RenderPresent(_renderer);
+
+                        if (elapsedTime > 250){
+                            newPiece.moveRight();
+                            SDL_Delay(75);
+                        }
                         break;
                     case SDLK_LEFT:
-                        newPiece.moveLeft();
-                        SDL_Delay(75);
+                        if (firstMove)
+                            newPiece.moveLeft();
+                        firstMove = false;
+
+                        if (!board.isValidPosition(newPiece)) newPiece = curPiece;
+
+                        board.deletePiece(curPiece);
+                        board.renderPiece(newPiece);
+
+                        SDL_RenderPresent(_renderer);
+
+                        if (elapsedTime > 250){
+                            newPiece.moveLeft();
+                            SDL_Delay(75);
+                        }
                         break;
                     case SDLK_SPACE:
                         if (board.canMoveDown(newPiece)){
@@ -193,6 +232,7 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
                             }
                             return true;
                         }
+                        break;
                     case SDLK_p:{
                         bool isExit = effect.pause();
                         curTick = SDL_GetTicks();
@@ -203,6 +243,8 @@ bool Game::tick(Tetromino curPiece, bool holdUsed){
                         break;
                 }
             }
+            else if (curEvent.type == SDL_KEYUP)
+                startPress = -1;
 
         if (!board.isValidPosition(newPiece)) newPiece = curPiece;
 
@@ -237,11 +279,11 @@ void Game::gameOver(){
     for (int i = 0; i < TOTAL_GAME_OVER_BUTTON; i++)
         gameOverButton[i].setDefaultButton();
 
-    /// Handle buttons' events
+    /// Handle buttons events
     while (1){
         bool pollSuccess = SDL_PollEvent(&event);
         if (pollSuccess){
-            bool hover = true;
+            bool hover = false;
             if (event.type == SDL_QUIT){
                 window.close();
                 return;
@@ -249,9 +291,11 @@ void Game::gameOver(){
 
             for (int i = 0; i < TOTAL_GAME_OVER_BUTTON; i++){
                 int mouseState = gameOverButton[i].handleEvent(&event);
+
                 if (mouseState == PRESSED){
                     hover = false;
                     SDL_SetCursor( arrowCursor );
+
                     if (i == PLAY_AGAIN){
                         effect.resume();
                         game.newGame();
@@ -259,11 +303,12 @@ void Game::gameOver(){
                     else{
                         effect.fadeIn(menuTexture);
                     }
+
                     return;
                 }
-                else if (mouseState == HOVERED){
+                else if (mouseState == HOVERED)
                     hover = true;
-                }
+
                 gameOverButton[i].render();
             }
 

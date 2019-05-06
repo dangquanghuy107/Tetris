@@ -376,20 +376,20 @@
 	<iostream>
 	"header.h"
 
-1555252404 c:\users\admin\desktop\tetris\tetromino.h
+1555384347 c:\users\admin\desktop\tetris\tetromino.h
 	<bits/stdc++.h>
 	<SDL.h>
 
-1555252431 source:c:\users\admin\desktop\tetris\tetromino.cpp
+1555384318 source:c:\users\admin\desktop\tetris\tetromino.cpp
 	<SDL.h>
 	"header.h"
 
-1555383749 source:c:\users\admin\desktop\tetris\game.cpp
+1557072048 source:c:\users\admin\desktop\tetris\game.cpp
 	<SDL.h>
 	<SDL_ttf.h>
 	"header.h"
 
-1555383639 c:\users\admin\desktop\tetris\game.h
+1557072051 c:\users\admin\desktop\tetris\game.h
 	"number.h"
 
 1540997982 e:\mingw_lib\i686-w64-mingw32\include\sdl2\sdl_image.h
@@ -407,7 +407,7 @@
 	<SDL.h>
 	<SDL_ttf.h>
 
-1555252858 source:c:\users\admin\desktop\tetris\number.cpp
+1555384204 source:c:\users\admin\desktop\tetris\number.cpp
 	<SDL.h>
 	<SDL_ttf.h>
 	"header.h"
@@ -423,7 +423,7 @@
 	<SDL.h>
 	"header.h"
 
-1555383957 source:c:\users\admin\desktop\tetris\menu.cpp
+1557069038 source:c:\users\admin\desktop\tetris\menu.cpp
 	<SDL.h>
 	"header.h"
 
@@ -435,7 +435,7 @@
 
 1555383232 c:\users\admin\desktop\tetris\effect.h
 
-1555383359 source:c:\users\admin\desktop\tetris\effect.cpp
+1557064219 source:c:\users\admin\desktop\tetris\effect.cpp
 	<SDL.h>
 	"header.h"
 
